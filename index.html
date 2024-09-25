@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 p-6">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold text-center mb-6">Token Generator</h1>
+        <form id="tokenForm">
+            <div class="mb-4">
+                <label for="numBlueTokens" class="block text-sm font-medium">Number of Blue Tokens:</label>
+                <input type="number" id="numBlueTokens" min="1" value="1" class="border border-gray-300 rounded-lg p-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="bluePrefix" class="block text-sm font-medium">Prefix for Blue Tokens:</label>
+                <input type="text" id="bluePrefix" value="Blue" class="border border-gray-300 rounded-lg p-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="blueTokensPerRow" class="block text-sm font-medium">Blue Tokens per Row:</label>
+                <input type="number" id="blueTokensPerRow" min="1" value="5" class="border border-gray-300 rounded-lg p-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="numRedTokens" class="block text-sm font-medium">Number of Red Tokens:</label>
+                <input type="number" id="numRedTokens" min="1" value="1" class="border border-gray-300 rounded-lg p-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="redPrefix" class="block text-sm font-medium">Prefix for Red Tokens:</label>
+                <input type="text" id="redPrefix" value="Red" class="border border-gray-300 rounded-lg p-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="redTokensPerRow" class="block text-sm font-medium">Red Tokens per Row:</label>
+                <input type="number" id="redTokensPerRow" min="1" value="5" class="border border-gray-300 rounded-lg p-2 w-full">
+            </div>
+            <button type="button" id="generateBtn" class="bg-green-500 text-white p-2 rounded-lg mb-2 w-full">Generate</button>
+            <button type="button" id="clearBtn" class="bg-red-500 text-white p-2 rounded-lg w-full">Clear</button>
+        </form>
+        <div id="tokensDisplay" class="mt-4 p-4 bg-gray-100 border border-gray-300 rounded-lg"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
